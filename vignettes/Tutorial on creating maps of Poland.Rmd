@@ -24,9 +24,12 @@ Note the various macros within the `vignette` setion of the metadata block above
 
 The figure sizes have been customised so that you can easily put two images side-by-side. 
 
-```{r, fig.show='hold'}
-plot(1:10)
-plot(10:1)
+```{r lau1, fig.height=6,fig.width=6,dev='CairoPNG'}
+library(MapOfPoland)
+par(mar = c(1, 1, 1, 1) + 0.1)
+plot(LAU1)
+plot(NTS2,lwd=2,add=T)
+#par(mar = c(5, 4, 4, 2) + 0.1)
 ```
 
 You can enable figure captions by `fig_caption: yes` in YAML:
@@ -42,7 +45,7 @@ Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr*
 You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
 
 ```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
+knitr::kable(head(elections2015[,1:5], 10))
 ```
 
 Also a quote using `>`:
