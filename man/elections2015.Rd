@@ -10,18 +10,31 @@ Dataset contains result of presidential elections 2015 in Poland on LAU2 level.
 
 \details{
 nts2 = NTS2 name,
+
 lau2 = LAU2 name,
+
 code = TERYT code for LAU2,
+
 no_citizens = Number of citizens allowed to vote,
+
 no_of_cards = Number of cards,
+
 no_of_unused_cards = Number of unused cards,
+
 cards_given = Number of cards given to voters,
+
 cards_invalid = Total number of invalid voting cards,
+
 cards_valid = Total number of valid voting cards,
+
 votes_invalid = Total number of invalid votes,
+
 votes_valid = Total number of valid votes,
+
 candidate = candidate code,
+
 number_of_votes = Total number of votes given to candidate
+
 round = Number of round (1, 2)
 
 Codes for candidates:
