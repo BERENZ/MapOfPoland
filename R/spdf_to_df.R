@@ -14,11 +14,7 @@
 #' # data("wojewdztwa")
 #' # spdf_to_df(wojewodztwa)
 
-
-
 spdf_to_df <- function(spdf){
-        library('ggplot2')
-        library('plyr')
         df <- fortify(spdf)
         join(df, spdf@data, by="id")
 }
