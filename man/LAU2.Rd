@@ -9,7 +9,15 @@ The Local Administrative Units (LAU) Level 2 – gminas, of which urban gminas t
 }
 \usage{data("LAU2")}
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+Dataset contains following columns:
+
+id - denoting plot order
+
+name - denoting name of LAU2 unit
+
+code - denote LAU2 code
+
+coord_x, coord_y - denote coordinates of centroids
 }
 \source{
 Poland: \url{http://stat.gov.pl/en/regional-statistics/nomenclature-nts-161/}
