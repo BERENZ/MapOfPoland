@@ -14,6 +14,7 @@ You can install the latest development version from github with:
       install.packages("devtools")
     }
     devtools::install_github("BERENZ/MapOfPoland")
+    ```
 
 
 Details can be found on:
