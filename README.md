@@ -7,6 +7,15 @@ Package consists of three maps:
 2. LAU1 level - Powiaty (380 units)
 3. LAU2 level - Gminy (2481 units)
 
+You can install the latest development version from github with:
+
+    ``` r
+    if (packageVersion("devtools") < 1.6) {
+      install.packages("devtools")
+    }
+    devtools::install_github("BERENZ/MapOfPoland")
+
+
 Details can be found on:
 
 * http://stat.gov.pl/en/regional-statistics/nomenclature-nts-161/
