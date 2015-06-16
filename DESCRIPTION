@@ -10,6 +10,7 @@ Description: This package contains set of maps of Poland made available by CODGi
             Data was converted into R. Original data can is available here: \code{http://www.codgik.gov.pl/index.php/darmowe-dane/prg.html}.
 License: GPL-2
 Repository: CRAN
-LazyData: TRUE
-LazyLoad: TRUE
-Depends: R (>= 2.10), sp, ggplot2, plyr
+LazyData: yes
+LazyLoad: yes
+Depends: R (>= 3.2.0), sp, ggplot2, plyr, knitr
+VignetteBuilder: knitr
