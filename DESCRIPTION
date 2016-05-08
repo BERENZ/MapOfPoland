@@ -1,17 +1,28 @@
 Package: MapOfPoland
-Version: 0.11
+Version: 0.12
 Type: Package
 Title: Set of maps of Poland
-Date: 2015-07-10
-Author: Maciej Beresewicz <maciej.beresewicz@gmail.com>, Jakub Nowosad <nowosad@amu.edu.pl>
+Date: 2016-05-08
+Author: Maciej Beresewicz <maciej.beresewicz@gmail.com>, Jakub Nowosad
+    <nowosad@amu.edu.pl>
 Maintainer: Maciej Beresewicz <maciej.beresewicz@gmail.com>
-Description: This package contains set of maps of Poland made available by CODGiK
-            (Centralny Osrodek Geodezji i Kartografii \code{http://www.codgik.gov.pl/index.php/zasob.html}).
-            Data was converted into R. Original data can is available here: \code{http://www.codgik.gov.pl/index.php/darmowe-dane/prg.html}.
+Description: This package contains set of maps of Poland made available by
+    CODGiK (Centralny Osrodek Geodezji i Kartografii \code{http://www.codgik.gov.pl/
+    index.php/zasob.html}). Data was converted into R. Original data can is
+    available here: \code{http://www.codgik.gov.pl/index.php/darmowe-dane/prg.html}.
 License: GPL-2
 Repository: CRAN
 LazyData: yes
 LazyLoad: yes
-Imports: ggplot2, plyr
-Depends: R (>= 3.2.0), sp, knitr
+Imports:
+    ggplot2,
+    ggmap,
+    viridis,
+    dplyr,
+    plyr
+Depends:
+    R (>= 3.2.0),
+    sp,
+    knitr
 VignetteBuilder: knitr
+RoxygenNote: 5.0.1

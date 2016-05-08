@@ -13,9 +13,7 @@ Package consists of three maps:
 You can install the latest development version from github with:
 
 ``` r
-if (packageVersion("devtools") < 1.6) {
-install.packages("devtools")
-}
+# install.packages("devtools")
 devtools::install_github("BERENZ/MapOfPoland")
 ```
 
