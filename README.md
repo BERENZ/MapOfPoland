@@ -1,14 +1,16 @@
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 MapOfPoland
 ===========
 
 Map of Poland
 
-Package consists of three maps:
+Package consists of six maps and one function `fast_ggmap`:
 
-1.  NTS2 level - Województwa (16 units)
-2.  LAU1 level - Powiaty (380 units)
-3.  LAU2 level - Gminy (2481 units)
+1. NTS1 level - Regions (6 units)
+2. NTS2 level - Województwa (16 units)
+3. NTS3 level - Podregiony (66 units)
+4. NTS3 level - Podregiony (72 units)
+5. LAU1 level - Powiaty (380 units)
+6. LAU2 level - Gminy (2481 units)
 
 You can install the latest development version from github with:
 
