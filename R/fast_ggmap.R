@@ -85,7 +85,8 @@ fast_ggmap <- function(data,
           size = 1,
           fill = NA
         ) +
-        theme_nothing(legend = TRUE)
+        theme_nothing(legend = TRUE) +
+        scale_fill_viridis(option = 'A')
     }
   }
 
