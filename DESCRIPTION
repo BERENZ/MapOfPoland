@@ -17,7 +17,8 @@ LazyLoad: yes
 Imports:
     ggplot2,
     dplyr,
-    ggmap
+    ggmap,
+    viridis
 Depends:
     R (>= 3.2.0),
     sp,
