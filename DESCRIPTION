@@ -16,7 +16,8 @@ LazyData: yes
 LazyLoad: yes
 Imports:
     ggplot2,
-    dplyr
+    dplyr,
+    ggmap
 Depends:
     R (>= 3.2.0),
     sp,

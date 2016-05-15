@@ -24,6 +24,7 @@ fast_ggmap <- function(data,
                        var,
                        maptype = 'powiat',
                        higher_level = T) {
+
   if (maptype == 'gmi') {
     data_map <- fortify(MapOfPoland::lau2, region = "jpt_kod_je")
   }
