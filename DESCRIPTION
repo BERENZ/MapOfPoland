@@ -18,6 +18,7 @@ Imports:
     ggplot2,
     dplyr,
     ggmap,
+    maptools,
     viridis
 Depends:
     R (>= 3.2.0),

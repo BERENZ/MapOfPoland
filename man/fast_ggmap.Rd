@@ -4,7 +4,8 @@
 \alias{fast_ggmap}
 \title{Simple function to plot data on map of Poland}
 \usage{
-fast_ggmap(data, id, var, maptype = "powiat", higher_level = T)
+fast_ggmap(data, id, var, maptype = "powiat", higher_level = T,
+  viridis = T, ...)
 }
 \arguments{
 \item{data}{- data.frame with id and variables for plot}
@@ -27,5 +28,5 @@ This function
 # data(lau2)
 #
 }
-\keyword{ggplot2}
+\keyword{map}
 

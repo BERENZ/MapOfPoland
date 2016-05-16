@@ -7,10 +7,12 @@
 #' @param var - variable to be plotted
 #' @param maptype - administrative level
 #' @param higher_level - whether to include higher level
+#' @param viridis
+#' @param ...
 #'
 #' @return ggplot2
 #'
-#' @keywords ggplot2
+#' @keywords map
 #'
 #' @export
 #'
@@ -18,35 +20,36 @@
 #' # data(lau2)
 #' #
 
-
 fast_ggmap <- function(data,
                        id,
                        var,
                        maptype = 'powiat',
-                       higher_level = T) {
+                       higher_level = T,
+                       viridis = T,
+                       ...) {
 
   if (maptype == 'gmi') {
-    data_map <- fortify(MapOfPoland::lau2, region = "jpt_kod_je")
+    data_map <- MapOfPoland::lau2
   }
 
   if (maptype == 'powiat') {
-    data_map <- fortify(MapOfPoland::lau1, region = "jpt_kod_je")
+    data_map <- MapOfPoland::lau1
   }
 
   if (maptype == 'podreg_66') {
-    data_map <- fortify(MapOfPoland::nts3_66, region = "jpt_kod_je")
+    data_map <- MapOfPoland::nts3_66
   }
 
   if (maptype == 'podreg_72') {
-    data_map <- fortify(MapOfPoland::nts3_72, region = "jpt_kod_je")
+    data_map <- MapOfPoland::nts3_72
   }
 
   if (maptype == 'woj') {
-    data_map <- fortify(MapOfPoland::nts2, region = "jpt_kod_je")
+    data_map <- MapOfPoland::nts2
   }
 
   if (maptype == 'region') {
-    data_map <- fortify(MapOfPoland::nts1, region = "jpt_kod_je")
+    data_map <- MapOfPoland::nts1
   }
 
   data_map <- left_join(x = data_map,
@@ -73,7 +76,7 @@ fast_ggmap <- function(data,
   ## add higher level
   if (higher_level) {
     if (maptype != 'woj') {
-      woj <- fortify(MapOfPoland::nts2, region = "jpt_kod_je")
+      woj <- MapOfPoland::nts2
 
       p1 <- p1 +
         geom_polygon(
@@ -85,10 +88,14 @@ fast_ggmap <- function(data,
           size = 1,
           fill = NA
         ) +
-        theme_nothing(legend = TRUE) +
-        scale_fill_viridis(option = 'A')
+        theme_nothing(legend = TRUE)
     }
   }
+
+  if (viridis) {
+    p1 <- p1 + scale_fill_viridis(...)
+  }
+
 
   return(p1)
 }
