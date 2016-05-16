@@ -3,12 +3,12 @@
 #' This function
 #'
 #' @param data - data.frame with id and variables for plot
-#' @param id - id for spatial units
-#' @param var - variable to be plotted
+#' @param id_var - id for spatial units
+#' @param fill_var - variable to be plotted
 #' @param maptype - administrative level
 #' @param higher_level - whether to include higher level
-#' @param viridis
-#' @param ...
+#' @param viridis - whether to use
+#' @param ... -dots
 #'
 #' @return ggplot2
 #'
@@ -21,8 +21,8 @@
 #' #
 
 fast_ggmap <- function(data,
-                       id,
-                       var,
+                       id_var,
+                       fill_var,
                        maptype = 'powiat',
                        higher_level = T,
                        viridis = T,
@@ -54,7 +54,7 @@ fast_ggmap <- function(data,
 
   data_map <- left_join(x = data_map,
                         y = data,
-                        by = c('id' = id))
+                        by = c('id' = id_var))
 
   ## normal map
 
@@ -65,11 +65,10 @@ fast_ggmap <- function(data,
         x = 'long',
         y = 'lat',
         group = 'group',
-        fill = var
+        fill = fill_var
       ),
       color = "black",
-      size = 0.25,
-    ) +
+      size = 0.25) +
     theme_nothing(legend = TRUE) +
     coord_map()
 

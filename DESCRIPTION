@@ -17,12 +17,12 @@ LazyLoad: yes
 Imports:
     ggplot2,
     dplyr,
-    ggmap,
-    maptools,
-    viridis
+    maptools
 Depends:
     R (>= 3.2.0),
     sp,
-    knitr
+    knitr,
+    ggmap,
+    viridis
 VignetteBuilder: knitr
 RoxygenNote: 5.0.1

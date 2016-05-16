@@ -4,19 +4,23 @@
 \alias{fast_ggmap}
 \title{Simple function to plot data on map of Poland}
 \usage{
-fast_ggmap(data, id, var, maptype = "powiat", higher_level = T,
+fast_ggmap(data, id_var, fill_var, maptype = "powiat", higher_level = T,
   viridis = T, ...)
 }
 \arguments{
 \item{data}{- data.frame with id and variables for plot}
 
-\item{id}{- id for spatial units}
+\item{id_var}{- id for spatial units}
 
-\item{var}{- variable to be plotted}
+\item{fill_var}{- variable to be plotted}
 
 \item{maptype}{- administrative level}
 
 \item{higher_level}{- whether to include higher level}
+
+\item{viridis}{- whether to use}
+
+\item{...}{-dots}
 }
 \value{
 ggplot2
